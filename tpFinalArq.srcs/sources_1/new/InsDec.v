@@ -1,4 +1,0 @@
-module InsDec(
-
-    );
-endmodule
