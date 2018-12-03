@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log PC.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source PC.tcl
+EAStep vivado -log Instruction_Fetch.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Instruction_Fetch.tcl

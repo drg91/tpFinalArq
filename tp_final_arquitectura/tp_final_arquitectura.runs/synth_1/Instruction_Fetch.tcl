@@ -16,11 +16,13 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
+set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir /home/cesar/Documentos/Tpfinal-Arquitectura/Repositorios/tpFinalArq/tp_final_arquitectura/tp_final_arquitectura.cache/wt [current_project]
 set_property parent.project_path /home/cesar/Documentos/Tpfinal-Arquitectura/Repositorios/tpFinalArq/tp_final_arquitectura/tp_final_arquitectura.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
@@ -29,7 +31,15 @@ set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
 set_property ip_output_repo /home/cesar/Documentos/Tpfinal-Arquitectura/Repositorios/tpFinalArq/tp_final_arquitectura/tp_final_arquitectura.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 add_files /home/cesar/Documentos/Tpfinal-Arquitectura/Repositorios/tpFinalArq/tp_final_arquitectura/Archivos/verilog/src/programa.COE
-read_verilog -library xil_defaultlib /home/cesar/Documentos/Tpfinal-Arquitectura/Repositorios/tpFinalArq/tp_final_arquitectura/Archivos/verilog/src/PC.v
+read_verilog -library xil_defaultlib {
+  /home/cesar/Documentos/Tpfinal-Arquitectura/Repositorios/tpFinalArq/tp_final_arquitectura/Archivos/verilog/src/MUX2to1.v
+  /home/cesar/Documentos/Tpfinal-Arquitectura/Repositorios/tpFinalArq/tp_final_arquitectura/Archivos/verilog/src/PC.v
+  /home/cesar/Documentos/Tpfinal-Arquitectura/Repositorios/tpFinalArq/tp_final_arquitectura/Archivos/verilog/src/adder.v
+  /home/cesar/Documentos/Tpfinal-Arquitectura/Repositorios/tpFinalArq/tp_final_arquitectura/Archivos/verilog/src/Instruction_Fetch.v
+}
+read_ip -quiet /home/cesar/Documentos/Tpfinal-Arquitectura/Repositorios/tpFinalArq/tp_final_arquitectura/tp_final_arquitectura.srcs/sources_1/ip/instruction_memory/instruction_memory.xci
+set_property used_in_implementation false [get_files -all /home/cesar/Documentos/Tpfinal-Arquitectura/Repositorios/tpFinalArq/tp_final_arquitectura/tp_final_arquitectura.srcs/sources_1/ip/instruction_memory/instruction_memory_ooc.xdc]
+
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be
@@ -41,12 +51,12 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 set_param ips.enableIPCacheLiteLoad 0
 close [open __synthesis_is_running__ w]
 
-synth_design -top PC -part xc7a35tcpg236-1
+synth_design -top Instruction_Fetch -part xc7a35tcpg236-1
 
 
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef PC.dcp
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file PC_utilization_synth.rpt -pb PC_utilization_synth.pb"
+write_checkpoint -force -noxdef Instruction_Fetch.dcp
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file Instruction_Fetch_utilization_synth.rpt -pb Instruction_Fetch_utilization_synth.pb"
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]
