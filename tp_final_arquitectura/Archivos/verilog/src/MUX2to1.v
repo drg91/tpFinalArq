@@ -20,12 +20,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module MUX2to1(
-	input wire selectorMUX,
-	input wire [31 : 0] entradaMUX_0,
-	input wire [31 : 0] entradaMUX_1,
-	output wire [31 : 0] salidaMUX
+	input   wire i_selector,
+	input   wire [31 : 0] i_entradaMUX_0,
+	input   wire [31 : 0] i_entradaMUX_1,
+	output  wire [31 : 0] o_salidaMUX
     );
 
-    assign salidaMUX = selectorMUX ? entradaMUX_1:
-                                     entradaMUX_0;
+    assign o_salidaMUX = i_selector ? i_entradaMUX_1:
+                                         i_entradaMUX_0;
 endmodule

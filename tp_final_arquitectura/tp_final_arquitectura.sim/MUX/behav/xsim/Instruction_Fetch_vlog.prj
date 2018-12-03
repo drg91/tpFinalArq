@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Archivos/verilog/src/ADD_PC.v" \
+"../../../../Archivos/verilog/src/MUX2to1.v" \
+"../../../../Archivos/verilog/src/PC.v" \
+"../../../../Archivos/verilog/src/instruction_memory.v" \
+"../../../../Archivos/verilog/src/Instruction_Fetch.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cesar/Documentos/Tpfinal-Arquitectura/Repositorios/tpFinalArq/tp_final_arquitectura/Archivos/verilog/src/MUX2to1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX2to1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cesar/Documentos/Tpfinal-Arquitectura/Repositorios/tpFinalArq/tp_final_arquitectura/Archivos/verilog/tb/tb_MUX2to1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_MUX2to1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cesar/Documentos/Tpfinal-Arquitectura/Repositorios/tpFinalArq/tp_final_arquitectura/tp_final_arquitectura.sim/MUX/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

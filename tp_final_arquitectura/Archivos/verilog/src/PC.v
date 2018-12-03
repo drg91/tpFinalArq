@@ -21,27 +21,27 @@
 
 
 module PC(
-	input wire clk,
-	input wire rst,
-    input wire PC_write,
-	input wire DB_WE,
-	input wire [31:0] PC_in,
-	output wire [31:0] PC_out
+	input   wire clk,
+	input   wire rst,
+    input   wire i_PC_write,
+	input   wire [31:0] i_PC,
+	output  wire [31:0] o_PC
     );
     
     reg [31:0] PC_temp;
     
-    always @(posedge clk)
-    begin
-        if (~rst)
+    always @(posedge clk) begin
+        if (~rst)begin
             PC_temp <= 32'b11111111111111111111111111111111;  
+        end
         else begin 
-            if(PC_Write && DB_WE)
-                PC_temp <= PC_in;
-            else 
+            if(i_PC_write) begin
+                PC_temp <= i_PC;
+            end
+            else begin 
                 PC_temp <= PC_temp;
+            end
         end
     end 
-    assign PC_out = PC_temp;
-
+    assign o_PC = PC_temp;
 endmodule

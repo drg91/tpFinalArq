@@ -1,0 +1,11 @@
+0.6
+2018.1
+Apr  4 2018
+18:43:17
+/home/cesar/Documentos/Tpfinal-Arquitectura/Repositorios/tpFinalArq/tp_final_arquitectura/Archivos/verilog/src/PC.v,1543790536,verilog,,/home/cesar/Documentos/Tpfinal-Arquitectura/Repositorios/tpFinalArq/tp_final_arquitectura/Archivos/verilog/tb/tb_PC.v,,PC,,,,,,,,
+/home/cesar/Documentos/Tpfinal-Arquitectura/Repositorios/tpFinalArq/tp_final_arquitectura/Archivos/verilog/src/adder.v,1543702684,verilog,,/home/cesar/Documentos/Tpfinal-Arquitectura/Repositorios/tpFinalArq/tp_final_arquitectura/Archivos/verilog/tb/tb_ADD_PC.v,,adder,,,,,,,,
+/home/cesar/Documentos/Tpfinal-Arquitectura/Repositorios/tpFinalArq/tp_final_arquitectura/Archivos/verilog/tb/tb_ADD_PC.v,1543765504,verilog,,,,tb_ADD_PC,,,,,,,,
+/home/cesar/Documentos/Tpfinal-Arquitectura/Repositorios/tpFinalArq/tp_final_arquitectura/Archivos/verilog/tb/tb_PC.v,1543791123,verilog,,,,tb_PC,,,,,,,,
+/home/cesar/Documentos/Tpfinal-Arquitectura/Repositorios/tpFinalArq/tp_final_arquitectura/Archivos/verilog/tb/tb_program_memory.v,1543792680,verilog,,,,tb_program_memory,,,,,,,,
+/home/cesar/Documentos/Tpfinal-Arquitectura/Repositorios/tpFinalArq/tp_final_arquitectura/tp_final_arquitectura.sim/sim_1/behav/xsim/glbl.v,1522801934,verilog,,,,glbl,,,,,,,,
+/home/cesar/Documentos/Tpfinal-Arquitectura/Repositorios/tpFinalArq/tp_final_arquitectura/tp_final_arquitectura.srcs/sources_1/ip/instruction_memory/sim/instruction_memory.v,1543793931,verilog,,/home/cesar/Documentos/Tpfinal-Arquitectura/Repositorios/tpFinalArq/tp_final_arquitectura/Archivos/verilog/tb/tb_program_memory.v,,instruction_memory,,,,,,,,
