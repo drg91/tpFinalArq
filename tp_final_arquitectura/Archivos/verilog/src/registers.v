@@ -23,18 +23,18 @@
 module registers(
         input wire clk,
         input wire rst,
-        input wire w_enable,
-        input wire [4:0] addres_rs,
-        input wire [4:0] addres_rt,
-        input wire [4:0] addres_rd,
-        input wire [31:0] data_rd,
-        output wire [31:0] data_rs,
-        output wire [31:0] data_rt
+        input wire i_wenable,
+        input wire [4:0] i_addres_rs,
+        input wire [4:0] i_addres_rt,
+        input wire [4:0] i_addres_rd,
+        input wire [31:0] i_data_rd,
+        output wire [31:0] o_data_rs,
+        output wire [31:0] o_data_rt
     );
 
 
 
-    reg [31:0]register_file[31:0];
+    reg [31:0]register_file[0:31];
     integer index;
     
     always@(posedge clk) begin
@@ -44,17 +44,12 @@ module registers(
             end
         end
         else begin
-            if (w_enable) begin
-                register_file[addres_rd] <= data_rd;
-            end
-            else begin
-                for(index=0; index<32; index = index + 1)begin
-                    register_file[index] <= register_file[index];
-                end
+            if (i_wenable) begin
+                register_file[i_addres_rd] <= i_data_rd;
             end
         end
     end
     
-    assign data_rs = register_file[addres_rs];
-    assign data_rt = register_file[addres_rt];
+    assign o_data_rs = register_file[i_addres_rs];
+    assign o_data_rt = register_file[i_addres_rt];
 endmodule

@@ -1,12 +1,12 @@
 #-----------------------------------------------------------
-# Vivado v2018.1 (64-bit)
-# SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
-# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Mon Dec  3 18:59:13 2018
-# Process ID: 31753
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Dec  4 19:23:24 2018
+# Process ID: 12468
 # Current directory: /home/cesar/Documentos/Tpfinal-Arquitectura/Repositorios/tpFinalArq/tp_final_arquitectura/tp_final_arquitectura.runs/synth_1
-# Command line: vivado -log Instruction_Fetch.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Instruction_Fetch.tcl
-# Log file: /home/cesar/Documentos/Tpfinal-Arquitectura/Repositorios/tpFinalArq/tp_final_arquitectura/tp_final_arquitectura.runs/synth_1/Instruction_Fetch.vds
+# Command line: vivado -log registers.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source registers.tcl
+# Log file: /home/cesar/Documentos/Tpfinal-Arquitectura/Repositorios/tpFinalArq/tp_final_arquitectura/tp_final_arquitectura.runs/synth_1/registers.vds
 # Journal file: /home/cesar/Documentos/Tpfinal-Arquitectura/Repositorios/tpFinalArq/tp_final_arquitectura/tp_final_arquitectura.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
-source Instruction_Fetch.tcl -notrace
+source registers.tcl -notrace

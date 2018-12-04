@@ -1,18 +1,13 @@
-Vivado Simulator 2018.1
-Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
-Running: /home/cesar/Xilinx/Vivado/2018.1/bin/unwrapped/lnx64.o/xelab -wto a512146cc23742fca7b4075ec9ed9c66 --incr --debug typical --relax --mt 8 -L dist_mem_gen_v8_0_12 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_Instruction_Fetch_behav xil_defaultlib.tb_Instruction_Fetch xil_defaultlib.glbl -log elaborate.log 
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /home/cesar/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto a512146cc23742fca7b4075ec9ed9c66 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_registers_behav xil_defaultlib.tb_registers xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.MUX2to1
-Compiling module xil_defaultlib.PC
-Compiling module xil_defaultlib.adder
-Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
-Compiling module xil_defaultlib.instruction_memory
-Compiling module xil_defaultlib.Instruction_Fetch
-Compiling module xil_defaultlib.tb_Instruction_Fetch
+Compiling module xil_defaultlib.registers
+Compiling module xil_defaultlib.tb_registers
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_Instruction_Fetch_behav
+Built simulation snapshot tb_registers_behav

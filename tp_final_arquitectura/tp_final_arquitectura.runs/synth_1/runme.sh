@@ -7,16 +7,16 @@
 # 
 
 if [ -z "$PATH" ]; then
-  PATH=/home/cesar/Xilinx/SDK/2018.1/bin:/home/cesar/Xilinx/Vivado/2018.1/ids_lite/ISE/bin/lin64:/home/cesar/Xilinx/Vivado/2018.1/bin
+  PATH=/home/cesar/Xilinx/SDK/2018.2/bin:/home/cesar/Xilinx/Vivado/2018.2/ids_lite/ISE/bin/lin64:/home/cesar/Xilinx/Vivado/2018.2/bin
 else
-  PATH=/home/cesar/Xilinx/SDK/2018.1/bin:/home/cesar/Xilinx/Vivado/2018.1/ids_lite/ISE/bin/lin64:/home/cesar/Xilinx/Vivado/2018.1/bin:$PATH
+  PATH=/home/cesar/Xilinx/SDK/2018.2/bin:/home/cesar/Xilinx/Vivado/2018.2/ids_lite/ISE/bin/lin64:/home/cesar/Xilinx/Vivado/2018.2/bin:$PATH
 fi
 export PATH
 
 if [ -z "$LD_LIBRARY_PATH" ]; then
-  LD_LIBRARY_PATH=/home/cesar/Xilinx/Vivado/2018.1/ids_lite/ISE/lib/lin64
+  LD_LIBRARY_PATH=/home/cesar/Xilinx/Vivado/2018.2/ids_lite/ISE/lib/lin64
 else
-  LD_LIBRARY_PATH=/home/cesar/Xilinx/Vivado/2018.1/ids_lite/ISE/lib/lin64:$LD_LIBRARY_PATH
+  LD_LIBRARY_PATH=/home/cesar/Xilinx/Vivado/2018.2/ids_lite/ISE/lib/lin64:$LD_LIBRARY_PATH
 fi
 export LD_LIBRARY_PATH
 
@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log Instruction_Fetch.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Instruction_Fetch.tcl
+EAStep vivado -log registers.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source registers.tcl

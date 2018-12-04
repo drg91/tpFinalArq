@@ -29,7 +29,7 @@ module Instruction_Fetch(
 	// Entradas desde la Hazard Detection Unit
 	input wire          i_PC_write,
 	//bus de salida de la etapa IF
-	output [63:0]       o_IF 
+	output wire [63:0]       o_IF 
     );
     
     
